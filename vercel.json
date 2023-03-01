@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "build.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/manifest.json",
+      "dest": "/build.js"
+    },
+    {
+      "src": "/stream",
+      "dest": "/build.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/404"
+    }
+  ]
+}
