@@ -14,7 +14,7 @@ const manifest = {
     catalogs: []
 }
 
-const { addonBuilder, serveHTTP, publishToCentral }  = require('stremio-addon-sdk')
+const { addonBuilder }  = require('stremio-addon-sdk')
 
 const addon = new addonBuilder(manifest)
 
@@ -94,3 +94,4 @@ addon.defineStreamHandler(args => {
 })
 
 module.exports = addon.getInterface()
+
