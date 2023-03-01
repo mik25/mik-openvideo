@@ -1,0 +1,18 @@
+{
+  "name": "stremio-addon",
+  "version": "1.0.0",
+  "description": "Stremio addon for Open Videos",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build": "ncc build index.js -o dist",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "needle": "^2.6.0",
+    "stremio-addon-sdk": "^1.6.10"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.28.2"
+  }
+}
