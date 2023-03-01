@@ -1,12 +1,17 @@
-const { getRouter } = require('stremio-addon-sdk')
-const addonInterface = require('./index')
-
-const router = getRouter(addonInterface)
-
-module.exports = (req, res) => {
-  router(req, res, () => {
-    res.statusCode = 404
-    res.end()
-  })
+{
+  "functions": {
+    "api/index": {
+      "memory": 128,
+      "runtime": "nodejs14.x",
+      "maxDuration": 10
+    }
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/api/index.js"
+    }
+  ]
 }
+
 
