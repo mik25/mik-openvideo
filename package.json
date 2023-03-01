@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "needle": "^2.2.4",
-    "stremio-addon-sdk": "^1.2.0"
+    "stremio-addon-sdk": "^1.6.10"
   },
   "engines": {
     "node": "18"
