@@ -1,18 +1,28 @@
 {
   "name": "mikmc-od",
   "version": "1.0.0",
-  "description": "",
+  "description": "Stremio addon for Open Directories",
   "main": "index.js",
   "scripts": {
-    "start": "node serverless.js",
-    "build": "@vercel/ncc build index.js -o dist"
+    "start": "node index.js",
+    "build": "ncc build index.js -o dist"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "ncc": "^0.3.6",
-    "needle": "^3.2.0",
-    "stremio-addon-sdk": "^1.6.10"
+    "axios": "^0.24.0",
+    "cheerio": "^1.0.0-rc.10",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "fs-extra": "^10.0.0",
+    "moment": "^2.29.1",
+    "morgan": "^1.10.0",
+    "stremio-addon-sdk": "^5.0.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.31.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mik25/mik-openvideo.git"
   }
 }
+
